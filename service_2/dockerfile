@@ -1,0 +1,20 @@
+FROM python:3.10
+# Use official Python image
+
+WORKDIR /app
+# Set working directory
+
+COPY requirements.txt ./
+# Copy only requirements file first (for caching pip install)
+
+RUN pip install -r requirements.txt
+# Install dependencies
+
+COPY . .
+# Copy remaining source code
+
+EXPOSE 8002
+# Expose port 8002
+
+CMD ["python", "app.py"]
+# Start the application

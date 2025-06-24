@@ -1,0 +1,30 @@
+FROM golang:1.20
+# Use the official Go image as a base
+
+WORKDIR /app
+# Set the working directory in the container
+# This is where the application code will reside
+
+COPY . .
+# Copy the entire current directory into the container
+# This includes the Go source files and any other necessary files
+
+RUN go mod init service1
+RUN go mod tidy
+# Initialize a new Go module named service1
+# and tidy up the dependencies
+# This ensures that the module is set up correctly and all dependencies are resolved
+
+RUN go build -o service_1 .
+# Build the Go application and output the binary as service_1
+# This compiles the Go code into an executable binary
+
+EXPOSE 8001
+# Expose port 8001 for the service
+# This allows the service to be accessible on this port
+
+CMD ["./service_1"]
+# Command to run the application when the container starts
+# This starts the compiled Go binary, which runs the service
+# This Dockerfile sets up a Go environment for a service running on port 8001 and builds the application from the source code.
+# The application is started with the command `./service_1`.
