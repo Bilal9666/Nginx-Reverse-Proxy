@@ -70,6 +70,11 @@ If you deploy the system on an AWS EC2 instance, replace localhost with your EC2
 
 Both services expose a `/health` endpoint to allow Docker to monitor if they are running properly.
 
+You can also manually test the health checks using:
+
+curl http://localhost:8080/service1/health
+curl http://localhost:8080/service2/health
+
 ## Deployment to AWS
 
 The same setup works on an AWS EC2 instance:
