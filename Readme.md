@@ -56,8 +56,15 @@ After setting up the project files, running a single Docker Compose command buil
 
 Once running, the services are accessible through the Nginx reverse proxy using the following URL paths:
 
-- `/service1/ping` and `/service1/hello` for Service 1
-- `/service2/ping` and `/service2/hello` for Service 2
+Service 1:
+http://localhost:8080/service1/ping
+http://localhost:8080/service1/hello
+
+Service 2:
+http://localhost:8080/service2/ping
+http://localhost:8080/service2/hello
+
+If you deploy the system on an AWS EC2 instance, replace localhost with your EC2 public IP address.
 
 ## Health Checks
 
