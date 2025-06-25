@@ -54,7 +54,6 @@ Make sure Docker and Docker Compose are installed.
 Clone the repository:
 
 git clone https://github.com/Bilal9666/Nginx-Reverse-Proxy.git
-cd your-repo-name
 
 Build and run the system using Docker Compose:
 
