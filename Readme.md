@@ -48,9 +48,17 @@ Docker Compose orchestrates the three containers:
 
 It defines how the services are built, connected, and how health checks are performed.
 
-## Running the Project
+### 6.How to Run This Project
+Make sure Docker and Docker Compose are installed.
 
-After setting up the project files, running a single Docker Compose command builds and starts all services.
+Clone the repository:
+
+git clone https://github.com/Bilal9666/Nginx-Reverse-Proxy.git
+cd your-repo-name
+
+Build and run the system using Docker Compose:
+
+docker-compose up --build
 
 ## Accessing the Services
 
